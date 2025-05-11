@@ -1,0 +1,27 @@
+
+<div class="flex justify-between gap-4">
+    <div class="border-2 border-red-500 p-2 w-1/3">
+        <table class="border-collapse border border-slate-300 min-w-full">
+            <thead>
+                <tr>
+                    <th class="border border-slate-600 px-3 py-2">Sl</th>
+                    <th class="border border-slate-600 px-3 py-2">Name</th>
+                    <th class="border border-slate-600 px-3 py-2">Action</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let group of groups; let i = index">
+                <tr>
+                    <td class="border border-slate-600 whitespace-nowrap px-3 py-2">{{i+1}}</td>
+                    <td class="border border-slate-600 whitespace-nowrap px-3 py-2">{{group.name}}</td>
+                    <td class="border border-slate-600 whitespace-nowrap px-3 py-2"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="border-2 border-red-500 w-1/3">
+        <p>Sajal</p>
+    </div>
+    <div class="border-2 border-red-500 w-1/3">
+        <p>Vai</p>
+    </div>
+</div>

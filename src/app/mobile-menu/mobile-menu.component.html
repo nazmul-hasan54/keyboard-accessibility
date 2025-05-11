@@ -1,0 +1,24 @@
+<div class="mobile-menu">
+    <!-- Hamburger Menu -->
+    <button class="menu-toggle" (click)="toggleMenu()">☰</button>
+  
+    <!-- Menu List -->
+    <ul class="menu-list" *ngIf="menuOpen">
+      <li *ngFor="let item of menuItems">
+        <div class="menu-item" (click)="toggleSubMenu(item.title)">
+          <a [routerLink]="item.route">{{ item.title }}</a>
+  
+          <!-- Show dropdown indicator if subMenu exists -->
+          <span *ngIf="item.subMenu.length > 0">▼</span>
+        </div>
+  
+        <!-- Dropdown Menu -->
+        <ul class="dropdown" *ngIf="activeMenu === item.title">
+          <li *ngFor="let subItem of item.subMenu">
+            <a [routerLink]="subItem.route">{{ subItem.title }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  

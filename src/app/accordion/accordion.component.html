@@ -1,0 +1,17 @@
+<div class="w-full max-w-lg mx-auto mt-5">
+    <div *ngFor="let item of accordionItems; let i = index">
+      <div class="border-b border-gray-200">
+        <button (click)="toggleAccordion(i)" class="w-full flex justify-between items-center text-left px-4 py-2 bg-gray-100 hover:bg-gray-200 focus:outline-none focus:bg-gray-200">
+          <span>{{ item.title }}</span>
+          @if(item.expanded){
+            <i class="fa-solid fa-angle-up"></i>
+          } @else {
+            <i class="fa-solid fa-angle-down"></i>
+          }
+        </button>
+        <div *ngIf="item.expanded" class="px-4 py-2 bg-white transition-all duration-500 ease-in-out">
+          <p>{{ item.content }}</p>
+        </div>
+      </div>
+    </div>
+</div>

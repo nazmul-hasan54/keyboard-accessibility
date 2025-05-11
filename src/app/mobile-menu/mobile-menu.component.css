@@ -1,0 +1,54 @@
+/* Mobile Menu Container */
+.mobile-menu {
+    background-color: indianred;
+    padding: 1rem;
+    color: white;
+  }
+  
+  /* Hamburger Menu Button */
+  .menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Menu List */
+  .menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Menu Items */
+  .menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+  }
+  
+  /* Dropdown Menu */
+  .dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .dropdown li {
+    padding: 0.8rem 1.5rem;
+    border-bottom: 1px solid lightgray;
+  }
+  
+  .dropdown li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .dropdown li a:hover {
+    color: indianred;
+  }
+  

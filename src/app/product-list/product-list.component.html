@@ -1,0 +1,25 @@
+
+<div class="select-group">
+    <div class="select-element">
+        <label for="group">Group</label>
+        <select name="group" id="group" (change)="onGroupChange($event)">
+            <option value="0">Select Group</option>
+            <option *ngFor="let group of groups" [value]="group.id">{{group.name}}</option>
+        </select>
+    </div>
+    <div *ngIf="category.length > 0" class="select-element">
+        <label for="category">Category</label>
+        <select name="category" id="category" (change)="onCategoryChange($event)">
+            <option value="0">Select Category</option>
+            <option *ngFor="let cat of category" [value]="cat.id">{{cat.name}}</option>
+        </select>
+    </div>
+    <div *ngIf="subCategory.length > 0" class="select-element">
+        <label for="subcategory">Sub Category</label>
+        <select name="subcategory" id="subcategory">
+            <option value="0">Select Sub Category</option>
+            <option *ngFor="let subCat of subCategory" [value]="subCat.id">{{subCat.name}}</option>
+        </select>
+    </div>
+</div>
+

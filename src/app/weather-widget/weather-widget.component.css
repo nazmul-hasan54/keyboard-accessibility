@@ -1,0 +1,36 @@
+.widget-header{
+    background-color: rgb(201, 198, 198);
+    border-bottom: 1px solid rgb(212, 211, 211);
+    padding: 10px;
+
+}
+
+.widget-title{
+    font-weight: bold;
+    font-size: large;
+}
+
+.widget-sub-title{
+    font-weight: bold;
+    font-size: small;
+}
+
+.widget-content{
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+.widget-actions{
+    background-color: rgb(223, 223, 223);
+    border-top: 1px solid rgb(212, 211, 211);
+    padding: 10px;
+    text-align: center;
+}
+
+.widget-actions button{
+    background: rgb(255, 174, 0);
+    padding: .5rem 1rem;
+    margin-right: 10px;
+    border-radius: 5px;
+}

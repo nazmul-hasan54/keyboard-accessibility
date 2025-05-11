@@ -1,0 +1,77 @@
+<div class="bg">
+    <div class="flex items-center justify-between gap-4">
+        <button class="logo flex items-center gap-4" (click)="toggleChildComponent()">
+            <img class="img-config" src="../../assets/images/grid.png" alt="" srcset="">
+            <span class="font-bold opacity-70">OneDrive</span>
+        </button>
+        <div class="hidden md:block relative">
+            <input type="text" placeholder="Search everything" class=" bg-white w-[30vw] h-[6vh] rounded-full shadow-md pl-10 outline-none">
+            <i class="fa-solid fa-magnifying-glass absolute left-4 top-[.8rem] opacity-70"></i>
+        </div>
+
+        <i class="md:hidden fa-solid fa-magnifying-glass"></i>
+
+        <div class="flex gap-4 [&_i]:opacity-70">
+            <a href="">
+                <i class="fa-regular fa-comment"></i>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-gear"></i>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-question"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-12 gap-4 py-8">
+        <div class="col-start-1 col-span-2">
+            <button class="flex items-center gap-2 button rounded-full">
+                <i class="fa-solid fa-plus"></i>
+                <span class="hidden md:block font-semibold">Add New</span>
+            </button>
+            <div class="py-5 px-3 hidden md:block">
+                <h2 class="font-semibold">User Name</h2>
+            </div>
+            <div class="flex flex-col my-5 md:my-0 gap-6 md:gap-3 px-3 [&_a]:flex [&_a]:gap-2 [&_a]:items-center">
+                <a href="">
+                    <i class="fa-solid fa-house"></i>
+                    <span class="hidden md:block">Home</span>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-folder"></i>
+                    <span class="hidden md:block">My Files</span>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-image"></i>
+                    <span class="hidden md:block">Photos</span>
+                </a>
+                <a href="">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="hidden md:block">Shared</span>
+                </a>
+                <a href="">
+                    <i class="fa-solid fa-trash"></i>
+                    <span class="hidden md:block">Recycle Bin</span>
+                </a>
+            </div>
+            <div class="md:py-5 px-3">
+                <h2 class="font-semibold hidden md:block">Browse files by</h2>
+                <a href="" class="flex gap-2 items-center pt-2">
+                    <i class="fa-regular fa-user"></i>
+                    <span class="hidden md:block">People</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-start-3 col-span-12 relative">
+            <div class="flex flex-col items-center absolute left-16 top-56 md:left-80 md:top-28">
+                <h4 class="font-semibold">Shared files will show up here</h4>
+                <img class="w-56 h-56" src="../../assets/images/empty_shared_v3.webp" alt="">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<app-child-items [isVisible]="isChildVisible"/>

@@ -1,0 +1,13 @@
+
+    <!-- @if(showBarChart){
+        
+    } @else if(showLineChart){
+        <canvas id="lineChart"></canvas>
+    } @else {
+        <canvas id="pieChart"></canvas>
+    } -->
+    
+<canvas [ngClass]="{'d-none': !showBarChart}" id="barChart"></canvas>
+<canvas [ngClass]="{'d-none': !showLineChart}" id="lineChart"></canvas>
+<canvas [ngClass]="{'d-none': !showPieChart}" id="pieChart"></canvas>
+

@@ -1,0 +1,24 @@
+
+.bg {
+    width: 100%;
+    height: 100vh;
+    background: #F1F0F4;
+    padding: 1rem;
+}
+.logo:hover {
+    color: #0953A5;
+}
+.img-config {
+    width: 2rem;
+    height: 2rem;
+}
+.button {
+    background: linear-gradient(to right,#0953A5, #5c00b3);
+    padding: .5rem 1rem;
+    color: white;
+}
+.button-sm {
+    background: linear-gradient(to right,#0953A5, #5c00b3);
+    padding: 1rem;
+    color: white;
+}

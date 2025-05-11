@@ -1,0 +1,12 @@
+button {
+    background: #9e9d9d;
+    padding: 14px;
+    border-radius: 4px;
+}
+
+.button-icon {
+    background: white;
+    
+    border: 1px dashed black;
+    padding: 6px 16px;
+}

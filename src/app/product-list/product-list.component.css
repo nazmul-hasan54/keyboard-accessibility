@@ -1,0 +1,26 @@
+.select-group{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding: 1rem 0;
+    gap: .8rem;
+}
+
+.select-group > .select-element{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.select-group > .select-element label{
+    width: 20%;
+}
+
+.select-group > .select-element select{
+    width: 70%;
+    height: 5vh;
+    border-radius: .3rem;
+}
+
+option{
+    border-radius: .3rem;
+}

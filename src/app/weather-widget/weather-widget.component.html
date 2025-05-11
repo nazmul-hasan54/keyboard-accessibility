@@ -1,0 +1,23 @@
+<div class="relative">
+    <div class="w-1/3 bg-white rounded-lg shadow-2xl absolute top-52 left-[30%]">
+        <div class="widget-header">
+            <div class="widget-title">
+                Weather Forcast
+            </div>
+            <div class="widget-sub-title">Current weatehr in you location</div>
+        </div>
+    
+        <div class="widget-content">
+            <div class="sky-condition">
+                {{state.data.skyCondition === 'sunny' ? '☀️' : '☁️'}}
+            </div>
+            <div class="temperature">{{state.data.temperature}}°C</div>
+        </div>
+    
+        <div class="widget-actions">
+            <button (click)="actions.reload()">Reload</button>
+            <button (click)="actions.copyData()">Copy Info</button>
+        </div>
+    </div>
+</div>
+

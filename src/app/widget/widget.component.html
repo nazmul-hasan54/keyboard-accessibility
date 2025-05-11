@@ -1,0 +1,23 @@
+<div class="bg-white rounded-xl shadow-md p-4">
+    <div class="flex justify-between item-center border-b pb-2">
+        <!-- <div class="text-lg font-bold">Weather Forecast</div>
+        <div class="">Currently in Bangladesh, Dhaka</div> -->
+
+        <!--If you want to generate header section dynamically, too-->
+        <div class="flex flex-col gap-2">
+            <ng-content select="[slot='header']">
+            
+            </ng-content>
+        </div>
+        <app-button>
+            <ng-content ngProjectAs="[slot='icon']" select="[slot='icon']" />
+        </app-button>
+    </div>
+    <div class="flex fle-col justify-center py-4 text-center">
+        <!-- <div class="w-16 h-16">☀️</div>
+        <div>21°C</div> -->
+        <ng-content>
+            
+        </ng-content>
+    </div>
+</div>

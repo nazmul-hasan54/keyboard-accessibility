@@ -1,0 +1,50 @@
+<form [formGroup]="form" (ngSubmit)="submit()" class="space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+      <input formControlName="customerName" placeholder="Customer Name" appKeyBoardAccessibility [isFirstInRow]="true" />
+      <select formControlName="customerType" appKeyBoardAccessibility>
+        <option value="" disabled selected>Select Customer Type</option>
+        <option value="regular">Regular</option>
+        <option value="premium">Premium</option>
+      </select>
+      <input formControlName="customerEmail" placeholder="Email" appKeyBoardAccessibility />
+      <input formControlName="address" placeholder="Address" appKeyBoardAccessibility />
+      <input formControlName="phone" placeholder="Phone" appKeyBoardAccessibility />
+    </div>
+    
+    <button
+      type="button"
+      class="mt-4 bg-blue-600 text-white px-4 py-2 rounded"
+      appKeyBoardAccessibility
+      [addRow]="addRow.bind(this)"
+      (click)="addRow()"
+    >
+      Add Item
+    </button>
+    <div formArrayName="details">
+      <h3 class="text-lg font-semibold mt-6">Order Details</h3>
+      <div *ngFor="let detail of details.controls; let i = index" [formGroupName]="i" class="grid grid-cols-4 gap-4 items-center">
+        <input formControlName="productName" placeholder="Product" appKeyBoardAccessibility [isFirstInRow]="true" />
+        <select formControlName="productCategory" appKeyBoardAccessibility>
+          <option value="" disabled selected>Select Category</option>
+          <option value="electronics">Electronics</option>
+          <option value="grocery">Grocery</option>
+          <option value="stationery">Stationery</option>
+        </select>
+        <input formControlName="quantity" type="number" placeholder="Qty" appKeyBoardAccessibility />
+        <input formControlName="price" type="number" placeholder="Price" appKeyBoardAccessibility />
+        <button
+          type="button"
+          (click)="removeRow(i)"
+          appKeyBoardAccessibility
+          [deleteRow]="removeRow.bind(this, i)"
+          [addRow]="addRow.bind(this)"
+          class="text-red-500"
+        >
+          Delete
+        </button>
+      </div>
+    </div>
+  
+    <button type="submit" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded">Submit</button>
+  </form>
+  

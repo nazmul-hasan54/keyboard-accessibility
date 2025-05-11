@@ -1,0 +1,20 @@
+<div class="content-container">
+    <div
+      class="animated-element"
+      id="section1"
+      [@fadeIn]="elementsInView['section1'] ? 'visible' : 'hidden'"
+    >
+      <h2>Section 1</h2>
+      <p>This content fades in when scrolled into view.</p>
+    </div>
+    
+    <div
+      class="animated-element"
+      id="section2"
+      [@fadeIn]="elementsInView['section2'] ? 'visible' : 'hidden'"
+    >
+      <h2>Section 2</h2>
+      <p>Another section with scrolling-based animation.</p>
+    </div>
+  </div>
+  
